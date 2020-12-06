@@ -4,9 +4,8 @@ terrain = File
 
 ch = Channel(Int32).new
 
-def ride(step_x, step_y, terrain = terrain, ch = ch)
-  x = y = 0
-  count = 0
+def ride(step_x, step_y, terrain, ch)
+  x = y = count = 0
   while y < terrain.size
     count += 1 if terrain[y][x] == '#'
     x = (x + step_x) % terrain[y].size
