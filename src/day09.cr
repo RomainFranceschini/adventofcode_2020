@@ -16,7 +16,7 @@ def find_weakness(invalid, numbers)
       sum <= invalid
     }.to_a
 
-    if sequence.size >= 2 && sequence.sum == invalid
+    if sequence.sum == invalid
       return sequence.minmax.sum
     end
   end
